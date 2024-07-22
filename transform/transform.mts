@@ -1,15 +1,18 @@
 import {
-  ClassPrototype,
   CommonFlags,
   DecoratorFlags,
   ElementKind,
-  InterfacePrototype,
   Node,
-  Program,
   PropertyPrototype,
   Source,
 } from "assemblyscript";
 import { Transform } from "assemblyscript/transform";
+
+import type {
+  ClassPrototype,
+  InterfacePrototype,
+  Program,
+} from "assemblyscript";
 
 const iface_name = "assembly/index/AdderIface";
 const class_name = "assembly/index/Adder";
