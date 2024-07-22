@@ -4,7 +4,9 @@ import {
   ElementKind,
   Node,
   PropertyPrototype,
+  Range,
   Source,
+  SourceKind,
 } from "assemblyscript";
 import { Transform } from "assemblyscript/transform";
 
@@ -19,20 +21,25 @@ const class_name = "assembly/index/Adder";
 const field_type = "string";
 const field_name = "foo";
 const field_value = "bar";
-const field_source = Source.native.range;
 const field_flags = CommonFlags.None;
 const field_decorator_flags = DecoratorFlags.None;
+const field_range = new Range(0, 0);
+field_range.source = new Source(
+  SourceKind.Library,
+  "assembly/index.ts",
+  "foo: string;"
+);
 
 const prop_name_identifier = Node.createIdentifierExpression(
   field_name,
-  field_source
+  field_range
 );
-const prop_type_node_name = Node.createSimpleTypeName(field_type, field_source);
+const prop_type_node_name = Node.createSimpleTypeName(field_type, field_range);
 const prop_type_node = Node.createNamedType(
   prop_type_node_name,
   null,
   false,
-  field_source
+  field_range
 );
 const iface_field_declaration = Node.createFieldDeclaration(
   prop_name_identifier,
@@ -40,11 +47,11 @@ const iface_field_declaration = Node.createFieldDeclaration(
   field_flags,
   prop_type_node,
   null,
-  field_source
+  field_range
 );
 const class_field_initializer = Node.createStringLiteralExpression(
   field_value,
-  field_source
+  field_range
 );
 const class_field_declaration = Node.createFieldDeclaration(
   prop_name_identifier,
@@ -52,7 +59,7 @@ const class_field_declaration = Node.createFieldDeclaration(
   field_flags,
   prop_type_node,
   class_field_initializer,
-  field_source
+  field_range
 );
 
 export default class extends Transform {
