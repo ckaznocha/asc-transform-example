@@ -1,7 +1,7 @@
 # `asc` Transform Example
 
-This repo is an an example of an AssemblyScript compiler transform. It's goal
-is to successfully and a field to an interface and a class implementing that
+This repo is an an example of an AssemblyScript compiler transform. Its goal
+is to successfully add a field to an interface and a class implementing that
 interface such that the field can be read at runtime.
 
 ## Setup
