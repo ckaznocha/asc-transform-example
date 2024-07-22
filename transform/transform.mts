@@ -73,7 +73,9 @@ export default class extends Transform {
     );
 
     iface_proto.instanceMembers?.forEach((member) => {
-      this.log(`interface instance member: '${member.name}'`);
+      this.log(
+        `interface '${iface_proto.name}' instance member: '${member.name}'`
+      );
     });
 
     proto = program.lookup(class_name);
@@ -99,7 +101,7 @@ export default class extends Transform {
     );
 
     class_proto.instanceMembers?.forEach((member) => {
-      this.log(`class instance member: '${member.name}'`);
+      this.log(`class '${class_proto.name}' instance member: '${member.name}'`);
     });
   }
 }

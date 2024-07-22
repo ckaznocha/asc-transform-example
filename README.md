@@ -34,10 +34,10 @@ npm run test
 > asc-transform-example@1.0.0 build-transform
 > tsc -p transform
 
-interface instance member: 'add'
-interface instance member: 'foo'
-class instance member: 'add'
-class instance member: 'foo'
+interface 'AdderIface' instance member: 'add'
+interface 'AdderIface' instance member: 'foo'
+class 'Adder' instance member: 'add'
+class 'Adder' instance member: 'foo'
 added field 'foo': 'bar'
 ok
 ```
@@ -56,10 +56,10 @@ ok
 > asc-transform-example@1.0.0 build-transform
 > tsc -p transform
 
-interface instance Member: 'add'
-interface instance Member: 'foo'
-class instance Member: 'add'
-class instance Member: 'foo'
+interface 'AdderIface' instance member: 'add'
+interface 'AdderIface' instance member: 'foo'
+class 'Adder' instance member: 'add'
+class 'Adder' instance member: 'foo'
 wasm://wasm/8f32392e:1
 
 

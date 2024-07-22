@@ -20,7 +20,7 @@
     "url": "https://github.com/ckaznocha/asc-transform-example/issues"
   },
   "homepage": "https://github.com/ckaznocha/asc-transform-example#readme",
-  "description": "An example of an AssemblyScript compiler transform",
+  "description": "An example of an AssemblyScript compiler transform.",
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
     "@tsconfig/strictest": "^2.0.5",
