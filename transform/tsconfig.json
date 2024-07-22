@@ -1,0 +1,13 @@
+{
+  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node20/tsconfig"],
+  "compilerOptions": {
+    "outDir": "../build",
+    "isolatedModules": false,
+    "esModuleInterop": false,
+    "paths": {
+      "assemblyscript/transform": [
+        "./../node_modules/assemblyscript/dist/asc.d.ts"
+      ]
+    }
+  }
+}
